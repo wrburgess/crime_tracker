@@ -18,15 +18,16 @@ This data reflects crimes as reported to the police as of the current date, occu
 
 The Chicago Police Department is not responsible for the content of any off-site pages that are referenced by or that reference to this web page other than an official City of Chicago or Chicago Police Department web page. The user specifically acknowledges that the Chicago Police Department is not responsible for any defamatory, offensive, misleading, or illegal conduct of other users, links, or third parties and that the risk of injury from the foregoing rests entirely with the user. Any use of the information for commercial purposes is strictly prohibited. The unauthorized use of the words "Chicago Police Department," " Chicago Police," or any colorable imitation of these words or the unauthorized use of the Chicago Police Department logo is unlawful. This web page does not, in any way, authorize such use.  
 
-t.string case
-t.date incident_date
-t.string block
-t.integer code
-t.string crime_type
-t.string secondary
-t.boolean arrest
-t.string location
-t.boolean domestic
-t.integer beat
-t.integer ward 
-t.integer nibrs
+## CLEAR DATA
+case  
+date  
+block  
+code  
+crime_type  
+secondary  
+arrest  
+location  
+domestic  
+beat  
+ward  
+nibrs  

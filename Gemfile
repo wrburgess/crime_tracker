@@ -11,6 +11,7 @@ gem "sass-rails", "4.0.1"
 gem "settingslogic", "2.0.9"
 gem "uglifier", "2.3.0"
 gem "unicorn", "4.6.3"
+gem "windy", "0.1.2"
 
 group :production do 
   gem "rails_12factor", "0.0.2"
