@@ -1,0 +1,101 @@
+%h1
+  Violent Crime in Lincoln Square
+
+.location  
+  .section
+    %h3 
+      Area
+    %p  
+      Lincoln Square  
+  .section
+    %h3 
+      Ward
+    %p
+      47  
+  .section
+    %h3 
+      Beat
+    %p
+      2032
+
+
+%h2 
+  Summaries
+.summaries  
+  .section
+    %h3 
+      Day<br />(Oct 25)
+    %p
+      2 
+  .section
+    %h3
+      Week<br />(#34)
+    %p
+      7 
+  .section
+    %h3
+      Month<br />(Oct)
+    %p
+      16 
+  .section
+    %h3
+      Year<br />(2013)
+    %p
+      101
+
+%h2 
+  Incidents
+%table.crimes
+  %thead
+    %tr
+      %th
+        CASE#
+      %th
+        DATE
+      %th
+        WARD
+      %th
+        BEAT
+      %th
+        BLOCK
+      %th
+        LOCATION
+      %th
+        CODE
+      %th
+        TYPE
+      %th
+        SECONDARY
+      %th
+        ARREST
+      %th
+        DOMESTIC
+      %th
+        NIBRS
+  %tbody
+    - @cases.each do |c|
+      %tr
+        %td
+          = c.case_id
+        %td
+          = c.case_date.strftime("%a,%m/%d/%y %I%p")
+        %td
+          = c.ward
+        %td
+          = c.beat
+        %td
+          = c.block
+        %td
+          = c.location
+        %td
+          = c.code
+        %td
+          = c.crime_type
+        %td
+          = c.secondary
+        %td
+          = c.arrest
+        %td
+          = c.domestic
+        %td
+          = c.nibrs

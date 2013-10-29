@@ -4,5 +4,5 @@ CrimeTracker::Application.routes.draw do
   get "legal", to: "static#legal"
   get "support", to: "static#support"
 
-  resources :cases
+  resources :cases, only: :index
 end
