@@ -3,6 +3,7 @@ CrimeTracker::Application.routes.draw do
   get "home", to: "static#home"
   get "legal", to: "static#legal"
   get "support", to: "static#support"
+  get "test", to: "static#test"
 
   resources :cases, only: :index
 end

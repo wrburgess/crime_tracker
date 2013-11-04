@@ -16,5 +16,8 @@ class StaticController < ApplicationController
 
   end
 
+  def test
+
+  end
 
 end

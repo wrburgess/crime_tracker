@@ -31,3 +31,5 @@ domestic
 beat  
 ward  
 nibrs  
+
+http://api1.chicagopolice.org/clearpath/api/1.0/crimes/list?dateOccurred=10-01-2013&max=20&offset=20
