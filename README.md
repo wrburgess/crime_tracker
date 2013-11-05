@@ -32,4 +32,111 @@ beat
 ward  
 nibrs  
 
+## ClearCase JSON Example
+
+```
+{
+   "beat":"1421",
+   "block":"031XX W BLOOMINGDALE AVE",
+   "rdNo":"HW476670",
+   "communityArea":"22",
+   "dateOccurred":"Oct-01-2013 11:55 PM",
+   "iucrDescription":"AUTOMOBILE",
+   "cpdDistrict":"014",
+   "iucr":"0910",
+   "lastUpdated":"Oct-05-2013 12:40 AM",
+   "locationDesc":"STREET",
+   "primary":"MOTOR VEHICLE THEFT",
+   "ward":"26",
+   "xCoordinate":1155391,
+   "yCoordinate":1911803
+}
+```
+
+## ChicagoCase JSON Example
+
+```
+{
+   "case_number":"HW476670",
+   "beat":"1421",
+   "location":{
+      "needs_recoding":false,
+      "longitude":"-87.70455437538006",
+      "latitude":"41.91379196070432"
+   },
+   "x_coordinate":"1155391",
+   "block":"031XX W BLOOMINGDALE AVE",
+   "primary_type":"MOTOR VEHICLE THEFT",
+   "location_description":"STREET",
+   "date":"2013-10-01T23:55:00",
+   "iucr":"0910",
+   "domestic":false,
+   "id":"9332907",
+   "ward":"26",
+   "arrest":false,
+   "description":"AUTOMOBILE",
+   "y_coordinate":"1911803",
+   "updated_on":"2013-10-05T00:40:31",
+   "fbi_code":"07",
+   "longitude":"-87.70455437538006",
+   "year":"2013",
+   "community_area":"22",
+   "latitude":"41.91379196070432",
+   "district":"014"
+}
+```
+
+| Clear | Chicago | Tracker | Example |
+|-------|---------|---------|---------|
+| id | id | id | 14 |
+| case_date | date | case_date | "Oct-05-2013 12:40 AM" |
+| beat | beat | beat | "1421" |
+| block | block | block | "031XX W BLOOMINGDALE AVE" |
+| rd_no | case_number | case_number | "HW476670" | 
+| community_area | community_area | community_area | "22" |
+| date_occurred | date | date_occurred | "2013-10-01T23:55:00" |
+| iucr_description | description | location_desc | "AUTOMOBILE" |
+| cpd_district | district | district | "014" |
+| iucr | iucr | iucr | "0910" |
+| last_updated | updated_on | source_updated_at | "Oct-05-2013 12:40 AM" |
+| location_desc | location_description | location_description | "STREET" |
+| primary | primary_type | primary_type | "MOTOR VEHICLE THEFT" |
+| ward | ward | ward | "26" |
+| x_coordinate | x_coordinate | | 1155391 |
+| y_coordinate | y_coordinate | | 1911803 |
+| x | longitude | longitude | -87.70455437538006 |   
+| x | latitude | latitude | 41.91379196070432 |            
+| created_at | created_at | created_at | "Oct-05-2013 12:40 AM" |
+| updated_at | updated_at | updated_at | "Oct-05-2013 12:40 AM" |
+| x | fbi_code | fbi_code | "07" |
+| x | arrest | arrest | false |   
+| x | domestic | domestic | false |
+| x | id | chicago_id | "9332907" | 
+
 http://api1.chicagopolice.org/clearpath/api/1.0/crimes/list?dateOccurred=10-01-2013&max=20&offset=20
+
+Download the latest Clear data of one week
+  If ClearCase exists, update data
+  If ClearCase does not exist, create record
+  If failure, send notice
+  If success, send notice
+  
+Download the latest Chicago.gov Data of one week
+  If ChicagoCase exists, update data
+  If ChicagoCase does not exist, create record
+  If failure, send notice
+  If success, send notice
+
+Import from past 7 days ClearCase into TrackerCase
+  If TrackerCase exists, update data
+  If TrackerCase does not exist, create record
+
+Import from past 7 days available ChicagoCase into TrackerCase
+  If TrackerCase exists, update data
+  If TrackerCase does not exist, create record
+
+
+
+
+
+

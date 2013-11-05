@@ -26,7 +26,7 @@ namespace :ct do
     end_date = "2013-10-02T00:00:01"
     url = "http://data.cityofchicago.org/resource/#{dataset_id}.json"
     resource = "#{url}?$where=date%20%3E=%20'#{begin_date}'AND%20date%20%3C%20'#{end_date}'"
-
+    binding.pry
     reports = JSON.parse(Nokogiri::HTML(open(resource)))
 
     if reports.count > 0
@@ -79,7 +79,6 @@ namespace :ct do
     resource = "#{url}?dateOccurred=#{report_date}&max=#{limit}&offset="
     resource_paged = "#{resource}#{page_start}"
     reports = JSON.parse(Nokogiri::HTML(open(resource_paged)))
-
     while reports.count > 0
       reports.each_with_index do |report, index|
         ClearCase.create!(
@@ -100,7 +99,7 @@ namespace :ct do
         )
         puts "Clear Case imported: Page #{page}, Number #{index}"
       end
-      
+
       page_start += limit 
       resource_paged = "#{resource}#{page_start}"
       reports = JSON.parse(Nokogiri::HTML(open(resource_paged)))
