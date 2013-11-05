@@ -86,6 +86,8 @@ nibrs
 }
 ```
 
+## Data Mapping
+
 | Clear | Chicago | Tracker | Example |
 |-------|---------|---------|:-------:|
 | id | id | id | 14 |
