@@ -87,7 +87,7 @@ nibrs
 ```
 
 | Clear | Chicago | Tracker | Example |
-|-------|---------|---------|---------|
+|-------|---------|---------|:-------:|
 | id | id | id | 14 |
 | case_date | date | case_date | "Oct-05-2013 12:40 AM" |
 | beat | beat | beat | "1421" |
@@ -102,8 +102,8 @@ nibrs
 | location_desc | location_description | location_description | "STREET" |
 | primary | primary_type | primary_type | "MOTOR VEHICLE THEFT" |
 | ward | ward | ward | "26" |
-| x_coordinate | x_coordinate | | 1155391 |
-| y_coordinate | y_coordinate | | 1911803 |
+| x_coordinate | x_coordinate | x_coordinate | 1155391 |
+| y_coordinate | y_coordinate | y_coordinate | 1911803 |
 | x | longitude | longitude | -87.70455437538006 |   
 | x | latitude | latitude | 41.91379196070432 |            
 | created_at | created_at | created_at | "Oct-05-2013 12:40 AM" |
