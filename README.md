@@ -35,6 +35,8 @@ nibrs
 ## ClearCase JSON Example
 
 ```
+http://api1.chicagopolice.org/clearpath/api/1.0/crimes/list?dateOccurred=10-01-2013&max=50&offset=0
+
 {
    "beat":"1421",
    "block":"031XX W BLOOMINGDALE AVE",
@@ -56,6 +58,8 @@ nibrs
 ## ChicagoCase JSON Example
 
 ```
+http://data.cityofchicago.org/resource/ijzp-q8t2.json?$where=case_number='HW476670'
+
 {
    "case_number":"HW476670",
    "beat":"1421",
@@ -113,7 +117,9 @@ nibrs
 | x | fbi_code | fbi_code | "07" |
 | x | arrest | arrest | false |   
 | x | domestic | domestic | false |
-| x | id | chicago_id | "9332907" | 
+| x | id | chicago_id | "9332907" |
+| x | x | sourced_clear | true |
+| x | x | source_chicago | true | 
 
 http://api1.chicagopolice.org/clearpath/api/1.0/crimes/list?dateOccurred=10-01-2013&max=20&offset=20
 
