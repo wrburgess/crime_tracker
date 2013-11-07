@@ -95,13 +95,13 @@ http://data.cityofchicago.org/resource/ijzp-q8t2.json?$where=case_number='HW4766
 | Clear | Chicago | Tracker | Example |
 |-------|---------|---------|:-------:|
 | id | id | id | 14 |
-| case_date | date | case_date | "Oct-05-2013 12:40 AM" |
+| case_date | case_date | case_date | "Oct-05-2013 12:40 AM" |
 | beat | beat | beat | "1421" |
 | block | block | block | "031XX W BLOOMINGDALE AVE" |
 | rd_no | case_number | case_number | "HW476670" | 
 | community_area | community_area | community_area | "22" |
 | date_occurred | date | date_occurred | "2013-10-01T23:55:00" |
-| iucr_description | description | location_desc | "AUTOMOBILE" |
+| iucr_description | description | iucr_description | "AUTOMOBILE" |
 | cpd_district | district | district | "014" |
 | iucr | iucr | iucr | "0910" |
 | last_updated | updated_on | source_updated_at | "Oct-05-2013 12:40 AM" |
@@ -117,9 +117,10 @@ http://data.cityofchicago.org/resource/ijzp-q8t2.json?$where=case_number='HW4766
 | x | fbi_code | fbi_code | "07" |
 | x | arrest | arrest | false |   
 | x | domestic | domestic | false |
-| x | id | chicago_id | "9332907" |
+| x | chicag_id | chicago_id | "9332907" |
+| x | year | year |
 | x | x | sourced_clear | true |
-| x | x | source_chicago | true | 
+| x | x | sourced_chicago | true | 
 
 http://api1.chicagopolice.org/clearpath/api/1.0/crimes/list?dateOccurred=10-01-2013&max=20&offset=20
 
@@ -142,9 +143,4 @@ Import from past 7 days ClearCase into TrackerCase
 Import from past 7 days available ChicagoCase into TrackerCase
   If TrackerCase exists, update data
   If TrackerCase does not exist, create record
-
-
-
-
-
 

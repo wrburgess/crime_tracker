@@ -31,36 +31,29 @@ namespace :ct do
 
     if reports.count > 0
       reports.each_with_index do |report, index|
-        
-        recoding = report["location"] ? report["location"]["needs_recoding"] : nil
-        longitude = report["location"] ? report["location"]["longitude"] : nil
-        latitude = report["location"] ? report["location"]["latitude"] : nil
 
         ChicagoCase.create!(  
-          case_number: report["case_number"],
+          case_date: report["date"],
           beat: report["beat"],
-          location_needs_recoding: recoding,
-          location_longitude: longitude,
-          location_latitude: latitude,
-          x_coordinate: report["x_coordinate"],
           block: report["block"],
-          primary_type: report["primary_type"],
-          location_description: report["location_description"],
-          date: report["date"],
-          iucr: report["iucr"],
-          domestic: report["domestic"],
-          case_id: report["id"],
-          ward: report["ward"],
-          arrest: report["arrest"],
-          description: report["description"],
-          y_coordinate: report["y_coordinate"],
-          updated_on: report["updated_on"],
-          fbi_code: report["fbi_code"],
-          longitude: report["longitude"],
-          year: report["year"],
+          case_number: report["case_number"],
           community_area: report["community_area"],
+          updated_on: report["updated_on"],
+          description: report["description"],
+          district: report["district"],
+          iucr: report["iucr"],
+          location_description: report["location_description"],
+          primary_type: report["primary_type"],
+          ward: report["ward"],
+          x_coordinate: report["x_coordinate"],
+          y_coordinate: report["y_coordinate"],
+          longitude: report["longitude"],
           latitude: report["latitude"],
-          district: report["district"]
+          fbi_code: report["fbi_code"],
+          arrest: report["arrest"],
+          domestic: report["domestic"],
+          chicago_id: report["id"],
+          year: report["year"]
         )
         puts "Chicago Case imported: #{index}"
       end
